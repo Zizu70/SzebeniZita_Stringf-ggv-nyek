@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1feladat</title>
+</head>
+
+<body>
+
+    <input type="text" id="szoveg" placeholder="Kérem a szöveget: ">
+    <button onclick="szovegHossza()">Hossz kiszámolása</button>
+
+    <p id="eredmeny"></p>
+
+    <script>
+        function szovegHossza() {
+
+            var szoveg = document.getElementById("szoveg").value;
+
+            var hossz = szoveg.length;
+
+        document.getElementById("eredmeny").textContent = "A szöveg hossza: " + hossz;
+        }
+    </script>
+
+</body>
+</html>

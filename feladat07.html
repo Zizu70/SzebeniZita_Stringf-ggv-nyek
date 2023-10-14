@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7feladat</title>
+</head>
+
+<body>
+
+    <input type="text" id="szoveg" placeholder="Kérném a szöveget: ">
+
+    <button onclick="feladat()">Szóközök száma</button>
+    <p id="megoldas"></p>
+
+    <script>
+        function feladat() {
+            const szoveg = document.getElementById("szoveg").value;
+            var szokozok = 0;
+            console.log(szokozok)
+            for (var i = 0; i < szoveg.length; i++) {
+                if (szoveg[i] === " ") {
+                    szokozok++;
+                }
+            }
+
+        document.getElementById("megoldas").textContent = "A szóközök száma: " + szokozok;
+        }
+    </script>
+
+
+</body>
+
+</html>

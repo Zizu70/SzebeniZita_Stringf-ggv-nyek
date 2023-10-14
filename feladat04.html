@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4feladat</title>
+</head>
+<body>
+       
+    <label for="szoveg">Kérem ide írjon: </label>
+    <input type="text" id="szoveg">
+    <br>
+    <br>
+    
+    <label>Milyen méretre változtassunk: </label>
+    <input type="radio" id="toLower" name="atalakitas" value="toLower">
+    <label for="toLower">Kisbetűssé</label>
+    <input type="radio" id="toUpper" name="atalakitas" value="toUpper">
+    <label for="toUpper">Nagybetűssé</label>
+    <br>
+    <br>
+
+    <button onclick="betuValaszto()">Átalakítás</button>
+    <p id="megoldas"></p>
+    
+    <script>
+        function betuValaszto() {
+            var szoveg = document.getElementById("szoveg").value;
+
+            var atalakitas;
+
+            if (document.getElementById("toLower").checked) {
+                atalakitas = "toLower";
+            } else if (document.getElementById("toUpper").checked) {
+                atalakitas = "toUpper";
+            }
+
+            var atalakitott;
+
+            if (atalakitas === "toLower") {
+                atalakitott = szoveg.toLowerCase();
+            } else if (atalakitas === "toUpper") {
+                atalakitott = szoveg.toUpperCase();
+            }
+        
+            document.getElementById("megoldas").textContent = atalakitott;
+        }
+    </script>
+
+</body>
+</html>

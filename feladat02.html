@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2feladat</title>
+</head>
+
+<body>
+
+    <input type="text" id="vezetek" placeholder="Vezeték neved: ">
+    <input type="text" id="kereszt" placeholder="Kereszt neved: ">
+    <button onclick="teljes()">Teljes név</button>
+
+    <script>
+        function teljes() {
+            var vezetek = document.getElementById("vezetek").value;
+            var kereszt = document.getElementById("kereszt").value;
+
+            var teljesNev = vezetek + " " + kereszt;
+            alert("A teljes neved: " + teljesNev);
+        }
+    </script>
+
+</body>
+</html>

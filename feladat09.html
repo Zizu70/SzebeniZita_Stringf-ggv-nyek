@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9feladat</title>
+</head>
+
+<body>
+
+    <p id="megoldas"></p>
+
+    <script>
+        var megoldas = document.getElementById("megoldas");
+        var karakterek = [];
+
+        for (var i = 0; i <= 255; i++) {
+            var karakter = String.fromCharCode(i);
+            karakterek.push(karakter);
+        }
+
+        megoldas.textContent = karakterek.join(", ");
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10feladat</title>
+</head>
+
+<body>
+
+    <input type="text" id="vezetek" placeholder="Vezeték neved: ">
+    <input type="text" id="kereszt" placeholder="Kereszt neved: ">
+    <br>
+    <br>
+    <button onclick="teljes()">Teljes név</button>
+    <p id="megoldas"></p>
+
+    <button onclick="forditva()">Teljes és forditott név</button>
+    <p id="megoldas2"></p>
+
+    <button onclick="titkositva()">Teljes, forditott és titkosított név</button>
+    <p id="megoldas3"></p>
+
+
+
+    <script>
+        var teljesNev;
+        var forditottNev;
+                
+        function teljes() {
+            var vezetek = document.getElementById("vezetek").value;
+            var kereszt = document.getElementById("kereszt").value;
+            teljesNev = vezetek + " " + kereszt;
+            document.getElementById("megoldas").textContent = "A teljes név: " + teljesNev;
+        }
+
+        function forditva() {
+            forditottNev = teljesNev.split('').reverse().join('');
+            document.getElementById("megoldas2").textContent = "Teljes és forditott név: " + forditottNev;
+        }
+
+        function titkositva() {
+           var titkosan = '';
+            
+            for (var i = 0; i < forditottNev.length; i++) {
+
+                titkosan += forditottNev.charCodeAt(i) + " ";
+            }
+
+            document.getElementById("megoldas3").textContent = "Teljes, forditott és titkosított név: " + titkosan;
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>

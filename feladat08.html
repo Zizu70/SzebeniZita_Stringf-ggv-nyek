@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8feladat</title>
+</head>
+<body>
+        
+    <input type="text" id="szoveg" placeholder="Kérném a szöveget: ">
+
+    <button onclick="feladat()">Titkosítás</button>
+    <p id="megoldas"></p>
+
+    <script>
+        function feladat() 
+        {
+            var szoveg = document.getElementById("szoveg").value;
+            var titkosan = "";
+        
+            for (var i = 0; i < szoveg.length; i++)
+            {
+                titkosan += szoveg.charCodeAt(i) + " ";
+            }
+        
+        document.getElementById("megoldas").textContent = "Titkosítva: " + titkosan; 	 							      
+        } 
+    </script>
+    
+</body>
+</html>

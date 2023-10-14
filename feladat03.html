@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3feladat</title>
+</head>
+<body>
+    
+    <br>
+    <label for="szoveg">Kérem ide írjon: </label>
+    <input type="text" id="szoveg">
+    <br>
+    <br>
+    
+    <button onclick="kisBetusse()">Kisbetűssé alakítás</button>
+    <p id="megoldas"></p>
+    
+    <script>
+        function kisBetusse() {
+            var szoveg = document.getElementById("szoveg").value;
+
+            var atalakitott = szoveg.toLowerCase();
+        
+            document.getElementById("megoldas").textContent = atalakitott;
+        }
+    </script>
+
+</body>
+</html>

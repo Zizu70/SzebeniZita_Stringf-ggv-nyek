@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6feladat</title>
+</head>
+
+<body>
+
+    <input type="text" id="szoveg" placeholder="Kérj be egy legalább 30 karakterből álló szöveget!">
+    <button onclick="szovegEll()">Ellenőrzés</button>
+    
+    <input type="text" id="szo">
+    <button onclick="szoEll()">Ellenőrzés</button>
+
+    <script>
+        function szovegEll() {
+            var szoveg = document.getElementById("szoveg").value;
+            if (szoveg.length < 30) {
+                alert("A szövegnek legalább 30 karakter hosszúnak kell lennie!");
+            } else {
+                alert("A szöveg megfelelő hosszú!");
+            }
+        }
+
+        function szoEll() {
+            var szoveg = document.getElementById("szoveg").value;
+            var szo = document.getElementById("szo").value;
+
+            var kisSzoveg = szoveg.toLowerCase();
+            var kisSzo = szo.toLowerCase();
+
+            if (kisSzoveg.includes(kisSzo)) {
+                alert("Szerepel az adott szó a keresett szövegben!");
+            } else {
+                alert("Nincs benne");
+            }
+        }
+    </script>
+
+</body>
+</html>

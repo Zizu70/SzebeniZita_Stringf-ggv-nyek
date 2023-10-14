@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5feladat</title>
+</head>
+
+<body>
+
+    <input type="text" id="szoveg" placeholder="Kérném a szöveget">
+    <button onclick="feladat()">Átalakítás megfordítva</button>
+    <p id="megoldas"></p>
+
+    <script>
+        function feladat() {
+            var szoveg = document.getElementById("szoveg").value;
+
+            var forditva = "";
+
+            for (var i = szoveg.length - 1; i >= 0; i--) {
+                forditva += szoveg[i];
+            }
+
+            var forditva = document.getElementById("megoldas").textContent = "Az átalakított szöveg: " + forditva;
+        }
+    </script>
+
+</body>
+
+</html>
